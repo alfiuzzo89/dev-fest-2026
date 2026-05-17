@@ -1,19 +1,21 @@
 import React from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import SpeakersPage from "@/app/speakers/page";
 
 globalThis.React = React;
 
-describe("Speakers page reference structure", () => {
-  test("redirects to / during pre-launch phase", () => {
-    try {
-      SpeakersPage();
-    } catch (error) {
-      expect(error).toBeInstanceOf(Error);
-      expect((error as Error).message).toContain("NEXT_REDIRECT");
-      expect(String((error as Error & { digest?: string }).digest)).toContain("/");
-      return;
-    }
+const renderSpeakersPage = () => renderToStaticMarkup(SpeakersPage());
 
-    throw new Error("Expected speakers page to redirect");
+describe("Speakers page reference structure", () => {
+  test("renders the screenshot-scoped hero, speaker wall, and featured panel", () => {
+    const html = renderSpeakersPage();
+
+    expect(html).toContain("Meet our Featured Speakers");
+    expect(html).toContain("All Speakers");
+    expect(html).toContain("Web &amp; Mobile");
+    expect(html).toContain("Cloud &amp; AI");
+    expect(html).toContain("Charlie Davis");
+    expect(html).toContain("Scheduled Sessions");
+    expect((html.match(/data-showcase-speaker=/g) ?? []).length).toBe(8);
   });
 });

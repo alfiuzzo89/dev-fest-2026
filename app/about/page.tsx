@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { aboutHero, aboutValues } from "@/src/content/about";
 import { team } from "@/src/content/team";
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  redirect("/");
   return (
     <main className="space-y-16 pb-12">
       <section className="grid gap-12 px-4 pt-10 md:grid-cols-[1.05fr_0.95fr] md:items-center md:px-10 md:pt-14">
