@@ -3,13 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { MobileNav } from "@/src/components/layout/mobile-nav";
-
-const links = [
-  { href: "/about", label: "About" },
-  { href: "/agenda", label: "Agenda" },
-  { href: "/speakers", label: "Speakers" },
-  { href: "/venue", label: "Venue" }
-];
+import { navLinks } from "@/src/content/nav-links";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -32,7 +26,7 @@ export function Header() {
         </button>
         <nav aria-label="Main" className="hidden md:block">
           <ul className="m-0 flex list-none gap-2 p-0">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <Link className="focus-ring rounded-md px-3 py-2 text-sm font-medium hover:bg-slate-100" href={link.href}>
                   {link.label}
