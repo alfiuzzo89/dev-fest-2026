@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { team, sponsors } from "@/src/content/team";
+import { team } from "@/src/content/team";
+import { sponsors } from "@/src/content/sponsors";
 import { venue } from "@/src/content/venue";
 import { TeamCard } from "@/src/components/about/team-card";
 
@@ -31,7 +32,7 @@ export default function HomePage() {
   const hasSponsors = sponsors.length > 0;
 
   return (
-    <main id="main-content" className="space-y-20 pb-16">
+    <main className="space-y-20 pb-16">
       {/* ── 1. Event info ─────────────────────────────────────── */}
       <section
         aria-labelledby="event-heading"
@@ -175,7 +176,7 @@ export default function HomePage() {
                 <a
                   href={venue.mapsLinkUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                   className="focus-ring inline-flex rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-600 transition-colors duration-200 hover:border-slate-300 hover:text-slate-900"
                 >
                   Open in Google Maps

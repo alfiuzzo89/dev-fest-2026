@@ -1,6 +1,7 @@
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import HomePage from "@/app/page";
+import { venue } from "@/src/content/venue";
 
 globalThis.React = React;
 
@@ -19,7 +20,7 @@ describe("root page — landing page", () => {
     const html = renderHomePage();
 
     expect(html).toContain('href="/venue"');
-    expect(html).toContain("Innovation Hub Main Hall");
+    expect(html).toContain(venue.name);
   });
 
   test("renders the meet-the-team section with all organizer cards", () => {

@@ -54,6 +54,5 @@ export type Venue = {
 export type Sponsor = {
   name: string;
   url: string;
-  /** Tier allows future grouping: "gold" | "silver" | "bronze" | "community" */
-  tier: string;
+  tier: "gold" | "silver" | "bronze" | "community";
 };

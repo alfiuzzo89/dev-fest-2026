@@ -1,4 +1,4 @@
-import type { Sponsor, TeamMember } from "@/src/types/content";
+import type { TeamMember } from "@/src/types/content";
 
 export const team: TeamMember[] = [
   {
@@ -91,12 +91,3 @@ export const team: TeamMember[] = [
   }
 ];
 
-/**
- * Sponsors displayed on the landing page.
- * The sponsors section is completely hidden when this array is empty.
- * Add entries to make the section visible. Replace with real data before launch.
- *
- * Example entry:
- * { name: "Google", url: "https://google.com", tier: "gold" }
- */
-export const sponsors: Sponsor[] = [];
