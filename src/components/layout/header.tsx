@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { MobileNav } from "@/src/components/layout/mobile-nav";
 
+// Pre-launch: only publicly accessible routes are exposed.
+// Restore /about, /agenda, /speakers when those pages go live.
 const links = [
-  { href: "/about", label: "About" },
-  { href: "/agenda", label: "Agenda" },
-  { href: "/speakers", label: "Speakers" },
+  { href: "/", label: "Home" },
   { href: "/venue", label: "Venue" }
 ];
 
