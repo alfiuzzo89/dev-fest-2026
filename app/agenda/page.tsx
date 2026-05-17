@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { AgendaPageContent } from "@/src/components/agenda/agenda-page-content";
 
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function AgendaPage() {
+  redirect("/");
   return (
     <main>
       <AgendaPageContent />

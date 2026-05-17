@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { SpeakersPageContent } from "@/src/components/speakers/speakers-page-content";
 
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function SpeakersPage() {
+  redirect("/");
   return (
     <main>
       <SpeakersPageContent />
