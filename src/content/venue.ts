@@ -5,18 +5,18 @@ export const venue: Venue = {
   address: "Dip. Ing. Civile, Informatica e Tecnologie Aeronautiche — Via Vito Volterra, 60",
   city: "Roma, Italy",
   mapEmbedUrl:
-    "https://maps.google.com/maps?q=Via+Vito+Volterra+60+Roma&output=embed",
+    "https://maps.google.com/maps?q=Università+degli+Studi+Roma+Tre,+Via+Vito+Volterra+60,+Roma&output=embed&z=16",
   mapsLinkUrl: "https://maps.google.com/?q=Via+Vito+Volterra+60,+Roma,+Italia",
   notes: [
-    "Oct 24-25, 2024",
+    "October 10, 2026",
     "9:00 AM - 6:00 PM"
   ],
   accessibilityInfo: [
-    "The venue is fully wheelchair accessible. Ramps are located at the North and South entrances. All floors are reachable via large elevators.",
-    "Dedicated quiet zones and assistive listening devices are available upon request at the information desk."
+    "Accessibility details for the venue will be confirmed closer to the event. If you have specific needs, please reach out to the organizers in advance.",
+    "We are committed to making DevFest Roma 2026 an inclusive experience for all attendees."
   ],
   directions: [
-    "Take Metro Line 1 (Blue) to 'Tech Park' station. From the exit, follow the signs for Innovation Hub. Bus 42 stops directly in front of the main entrance every 15 minutes.",
-    "Free parking is available in Lot B for all DevFest attendees. Please present your digital ticket at the gate. Carpooling is highly encouraged to minimize environmental impact."
+    "The venue is best reached by public transport. Use Google Maps with the address Via Vito Volterra 60, Roma to find the best route from your starting point. Trastevere and Ostiense railway stations are the closest major hubs.",
+    "No dedicated event parking is available. Limited street parking may be found in the surrounding area. Carpooling or public transport is strongly recommended."
   ]
 };

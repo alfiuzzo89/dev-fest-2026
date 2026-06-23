@@ -18,10 +18,10 @@ describe("About page reference structure", () => {
     expect((html.match(/data-about-value=/g) ?? []).length).toBe(3);
   });
 
-  test("uses placeholder image urls instead of generated svg data uris", () => {
+  test("renders the GDG logo as a file reference, not an inlined data uri", () => {
     const html = renderAboutPage();
 
-    expect(html).toContain("https://placehold.co/600x400");
+    expect(html).toContain("/logos/gdg-roma-light.svg");
     expect(html).not.toContain("data:image/svg+xml");
   });
 });

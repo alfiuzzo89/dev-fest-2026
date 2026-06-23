@@ -5,7 +5,7 @@ export const aboutHero = {
     "Our mission is to bring together local developers to learn, share, and connect through Google technologies and community-driven events. DevFest is a global decentralized conference hosted by Google Developer Groups.",
   primaryCta: { label: "Join the Community", href: "#" },
   secondaryCta: { label: "Read Manifesto", href: "#" },
-  visual: "https://placehold.co/600x400"
+  visual: "/logos/gdg-roma-light.svg"
 };
 
 export const aboutValues = [

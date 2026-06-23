@@ -2,30 +2,34 @@ import type { Metadata } from "next";
 import { venue } from "@/src/content/venue";
 
 export const metadata: Metadata = {
-  title: "Venue | DevFest by GDG",
-  description: "Find venue details, map, transport, and accessibility information."
+  title: "Venue | DevFest Roma",
+  description: "Find venue details, map, transport, and accessibility information for DevFest Roma 2026."
 };
 
 export default function VenuePage() {
   return (
-    <main className="bg-[#f3f4f6]">
+    <main className="rounded-[2.5rem] bg-[#f3f4f6]">
       <div className="mx-auto max-w-6xl space-y-8 px-4 py-6 md:px-6">
         <section className="space-y-4">
           <h1 className="m-0 text-[3.5rem] font-semibold leading-[1.02] tracking-[-0.05em] text-slate-950">Venue &amp; Location</h1>
           <p className="m-0 max-w-3xl text-xl leading-8 text-slate-500">
-            Join us at the heart of innovation for DevFest. Find all the details you need to reach the venue and navigate the
+            Join us at the heart of innovation for DevFest Roma. Find all the details you need to reach the venue and navigate the
             space comfortably.
           </p>
         </section>
 
         <section
           aria-label="Map area"
-          className="relative overflow-hidden rounded-[1.6rem] border border-slate-200 bg-[linear-gradient(0deg,rgba(239,244,248,0.95),rgba(239,244,248,0.95)),linear-gradient(90deg,rgba(189,199,211,0.35)_1px,transparent_1px),linear-gradient(rgba(189,199,211,0.3)_1px,transparent_1px)] bg-[size:auto,72px_72px,72px_72px] bg-center"
+          className="overflow-hidden rounded-[2.5rem] border border-slate-200"
         >
-          <div className="absolute left-6 top-6 w-full max-w-xs rounded-xl bg-white px-4 py-3 text-sm text-slate-400 shadow-[0_10px_24px_rgba(15,23,42,0.08)]">
-            Search nearby restaurants or hotels
-          </div>
-          <div className="h-[20rem] w-full" />
+          <iframe
+            src={venue.mapEmbedUrl}
+            className="h-[20rem] w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="DevFest Roma 2026 — Università degli Studi Roma Tre"
+            allowFullScreen
+          />
         </section>
 
         <section className="grid gap-8 md:grid-cols-[1fr_1fr]">
@@ -34,7 +38,7 @@ export default function VenuePage() {
               <span className="text-[#4d8cff]">•</span>
               <span>Venue Address</span>
             </div>
-            <div className="rounded-2xl bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.05)]">
+            <div className="rounded-[2.5rem] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.05)]">
               <div className="space-y-3">
                 <h2 className="m-0 text-[2rem] font-semibold leading-tight tracking-[-0.04em] text-slate-900">{venue.name}</h2>
                 <p className="m-0 text-lg leading-8 text-slate-500">
@@ -53,11 +57,11 @@ export default function VenuePage() {
               </a>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              <div className="rounded-2xl border border-slate-200 bg-[#f5f6f8] p-5">
+              <div className="rounded-[2.5rem] border border-slate-200 bg-[#f5f6f8] p-5">
                 <p className="m-0 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Date</p>
                 <p className="mt-3 mb-0 text-lg font-semibold text-slate-800">{venue.notes[0]}</p>
               </div>
-              <div className="rounded-2xl border border-slate-200 bg-[#f5f6f8] p-5">
+              <div className="rounded-[2.5rem] border border-slate-200 bg-[#f5f6f8] p-5">
                 <p className="m-0 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Time</p>
                 <p className="mt-3 mb-0 text-lg font-semibold text-slate-800">{venue.notes[1]}</p>
               </div>

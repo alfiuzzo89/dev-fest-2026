@@ -5,7 +5,7 @@ export const team: TeamMember[] = [
     name: "Davide Passafaro",
     role: "Organizer",
     bioShort: "Co-organizer of GDG Roma Città, passionate about building inclusive developer communities.",
-    photo: "https://placehold.co/160x160",
+    photo: "/team/davide_passafaro.webp",
     links: [],
     accentColor: "#75a7f3"
   },
@@ -13,7 +13,7 @@ export const team: TeamMember[] = [
     name: "Giorgio Galassi",
     role: "Organizer",
     bioShort: "Co-organizer of GDG Roma Città, freelance developer and community builder.",
-    photo: "https://placehold.co/160x160",
+    photo: "/team/giorgio_galassi.webp",
     links: [],
     accentColor: "#f58b7f"
   },
@@ -21,7 +21,7 @@ export const team: TeamMember[] = [
     name: "Eleonora Biancone",
     role: "Organizer",
     bioShort: "Co-organizer of GDG Roma Città, working at BIP and advocating for diverse tech communities.",
-    photo: "https://placehold.co/160x160",
+    photo: "/team/eleonora_biancone.webp",
     links: [],
     accentColor: "#d4b16a"
   },
@@ -29,7 +29,7 @@ export const team: TeamMember[] = [
     name: "Ryan Jherome Burgos",
     role: "Organizer",
     bioShort: "Co-organizer of GDG Roma Città, Frontend Software Engineer and community contributor.",
-    photo: "https://placehold.co/160x160",
+    photo: "/team/ryan_jherome_burgos.webp",
     links: [],
     accentColor: "#7fbf8d"
   },
@@ -37,7 +37,7 @@ export const team: TeamMember[] = [
     name: "Giulio Alfieri",
     role: "Organizer",
     bioShort: "Co-organizer of GDG Roma Città, dedicated to growing the local developer ecosystem.",
-    photo: "https://placehold.co/160x160",
+    photo: "/team/giulio_alfieri.webp",
     links: [],
     accentColor: "#86a8f4"
   }

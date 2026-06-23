@@ -4,8 +4,8 @@ import { team } from "@/src/content/team";
 import { TeamCard } from "@/src/components/about/team-card";
 
 export const metadata: Metadata = {
-  title: "About | DevFest by GDG",
-  description: "Learn about the GDG team organizing DevFest."
+  title: "About | DevFest Roma",
+  description: "Learn about the GDG team organizing DevFest Roma."
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
             <h1 className="m-0 max-w-sm text-5xl font-semibold leading-[0.94] tracking-[-0.05em] text-slate-950 md:text-[3.7rem]">
               About GDG
               <br />
-              <span className="text-[#4d8cff]">DevFest</span>
+              <span className="text-[#4d8cff]">DevFest Roma</span>
             </h1>
             <p className="m-0 max-w-md text-[1rem] leading-7 text-slate-600">{aboutHero.description}</p>
           </div>
@@ -40,8 +40,8 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="mx-auto w-full max-w-[30rem]">
-          <div className="overflow-hidden rounded-2xl bg-white shadow-[0_22px_36px_rgba(15,23,42,0.12)]">
-            <img src={aboutHero.visual} alt="DevFest event stage" className="block h-auto w-full" />
+          <div className="overflow-hidden rounded-2xl bg-white p-10 shadow-[0_22px_36px_rgba(15,23,42,0.12)]">
+            <img src={aboutHero.visual} alt="GDG Roma Città" className="block h-auto w-full" />
           </div>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function AboutPage() {
             </h2>
             <div className="mx-auto h-1 w-16 rounded-full bg-[#4d8cff]" />
             <p className="mx-auto max-w-xl text-sm leading-6 text-slate-500">
-              The passionate volunteers behind DevFest working to create an inclusive and high-impact experience for everyone.
+              The passionate volunteers behind DevFest Roma working to create an inclusive and high-impact experience for everyone.
             </p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

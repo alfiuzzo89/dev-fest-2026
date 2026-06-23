@@ -11,9 +11,9 @@ describe("root page — landing page", () => {
   test("renders the event info section with title, date, and location", () => {
     const html = renderHomePage();
 
-    expect(html).toContain("DevFest 2026");
+    expect(html).toContain("DevFest Roma");
     expect(html).toContain("Roma");
-    expect(html).toContain("TBA");
+    expect(html).toContain("October 10, 2026");
   });
 
   test("renders the venue summary section with a link to /venue", () => {

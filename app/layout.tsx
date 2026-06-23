@@ -11,17 +11,17 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "DevFest by GDG",
-  description: "Official DevFest website with agenda, speakers, and venue details.",
+  title: "DevFest Roma by GDG Roma Città",
+  description: "Official DevFest Roma website with agenda, speakers, and venue details.",
   openGraph: {
-    title: "DevFest by GDG",
-    description: "Discover sessions, speakers, and venue information for DevFest.",
+    title: "DevFest Roma by GDG Roma Città",
+    description: "Discover sessions, speakers, and venue information for DevFest Roma.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevFest by GDG",
-    description: "Discover sessions, speakers, and venue information for DevFest."
+    title: "DevFest Roma by GDG Roma Città",
+    description: "Discover sessions, speakers, and venue information for DevFest Roma."
   }
 };
 

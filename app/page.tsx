@@ -6,11 +6,11 @@ import { venue } from "@/src/content/venue";
 import { TeamCard } from "@/src/components/about/team-card";
 
 export const metadata: Metadata = {
-  title: "DevFest 2026 · Roma — Home",
+  title: "DevFest Roma 2026 — Home",
   description:
-    "DevFest 2026 by GDG Roma Città — A full-day developer conference on AI, Web, Cloud, and Mobile at Università degli Studi Roma Tre.",
+    "DevFest Roma 2026 by GDG Roma Città — A full-day developer conference on AI, Web, Cloud, and Mobile at Università degli Studi Roma Tre.",
   openGraph: {
-    title: "DevFest 2026 · Roma",
+    title: "DevFest Roma 2026",
     description: "Join GDG Roma Città for a day of talks, workshops, and community.",
     type: "website"
   }
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 
 /** Canonical event info — swap real values here when confirmed. */
 const eventInfo = {
-  title: "DevFest 2026",
-  subtitle: "Roma",
-  date: "TBA",
+  title: "DevFest Roma",
+  subtitle: "2026",
+  date: "October 10, 2026",
   location: "Roma, Italy",
   description:
-    "A full-day developer conference organized by GDG Roma Città — a community of 495+ developers passionate about technology and innovation. Talks, workshops, and networking across AI, Web, Cloud, and Mobile.",
+    "A full-day developer conference organized by GDG Roma Città — a community of 495+ developers passionate about technology and innovation. Three concurrent tracks across AI/ML, Architecture, Cloud, and more. Theme: Build, Secure, Scale — Developers and Builders in the Agentic Era.",
   registerHref: "#",
   agendaHref: "/agenda"
 } as const;
@@ -32,14 +32,16 @@ export default function HomePage() {
   const hasSponsors = sponsors.length > 0;
 
   return (
-    <main className="space-y-20 pb-16">
+    <main className="space-y-6 pb-16">
       {/* ── 1. Event info ─────────────────────────────────────── */}
       <section
         aria-labelledby="event-heading"
-        className="bg-white px-4 pt-12 pb-10 md:px-10 md:pt-20 md:pb-16"
+        className="px-4 md:px-10"
         data-section="event-info"
       >
-        <div className="mx-auto max-w-4xl space-y-8">
+        <div className="mx-auto max-w-4xl">
+        <div className="rounded-[2.5rem] bg-white px-8 py-14 shadow-[0_1px_0_rgba(15,23,42,0.05)] ring-1 ring-slate-100">
+        <div className="space-y-8">
           <div className="space-y-2">
             <span className="inline-flex rounded-full bg-[#e8f0fe] px-3 py-1 text-[0.64rem] font-semibold tracking-[0.16em] text-[#5f8ee7] uppercase">
               GDG Roma Città
@@ -82,13 +84,17 @@ export default function HomePage() {
             >
               Register Now
             </a>
+            {/* Restore once agenda is live:
             <Link
               href={eventInfo.agendaHref}
               className="focus-ring inline-flex rounded-lg border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition-colors duration-200 hover:border-slate-300 hover:text-slate-950"
             >
               View Agenda
             </Link>
+            */}
           </div>
+        </div>
+        </div>
         </div>
       </section>
 
@@ -110,7 +116,7 @@ export default function HomePage() {
                 </h2>
                 <div className="mx-auto h-1 w-16 rounded-full bg-[#fbbc04]" />
                 <p className="mx-auto max-w-lg text-sm leading-6 text-slate-500">
-                  DevFest is made possible thanks to the generous support of our partners.
+                  DevFest Roma is made possible thanks to the generous support of our partners.
                 </p>
               </div>
 
@@ -187,7 +193,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. Meet the team ─────────────────────────────────── */}
+      {/* ── 4. Call for Papers ───────────────────────────────── */}
+      {/* Remove this section after July 31 2026 when CFP closes */}
+      <section
+        aria-labelledby="cfp-heading"
+        className="px-4 md:px-10"
+        data-section="cfp"
+      >
+        <div className="mx-auto max-w-4xl">
+          <div className="rounded-[2.5rem] bg-white px-8 py-14 shadow-[0_1px_0_rgba(15,23,42,0.05)] ring-1 ring-slate-100">
+            <div className="space-y-4">
+              <span className="inline-flex rounded-full bg-[#e6f4ea] px-3 py-1 text-[0.64rem] font-semibold tracking-[0.16em] text-[#34a853] uppercase">
+                Call for Papers — Open
+              </span>
+              <h2
+                id="cfp-heading"
+                className="m-0 text-[2rem] font-semibold tracking-[-0.04em] text-slate-900"
+              >
+                Submit Your Talk
+              </h2>
+              <p className="m-0 max-w-2xl text-lg leading-8 text-slate-500">
+                We&apos;re looking for speakers across all experience levels. Share your knowledge on the new challenges developers face in the agentic era — no marketing, just real content and case studies.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              <div className="space-y-3">
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-400">Topics</h3>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4d8cff]" />AI/ML — GenAI, Agentic Workflows, LLM Ops</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4d8cff]" />Architecture — Design Patterns, Microservices, Clean Architecture</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4d8cff]" />Backend, Cloud, DevOps, Frontend</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4d8cff]" />Soft Skills &amp; Career Development</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4d8cff]" />Mobile, Cybersecurity, IoT &amp; more</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-400">Speaker Benefits</h3>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#34a853]" />Free event admission</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#34a853]" />Exclusive speaker dinner</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#34a853]" />Event merchandise</li>
+                  <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#34a853]" />Full organizational support</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="https://sessionize.com/devfest-roma-2026/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="focus-ring inline-flex rounded-lg bg-[#34a853] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_20px_rgba(52,168,83,0.18)] transition-colors duration-200 hover:bg-[#2d9647]"
+              >
+                Submit a Proposal
+              </a>
+              <span className="text-sm text-slate-400">
+                Deadline: <strong className="text-slate-600">July 31, 2026</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. Meet the team ─────────────────────────────────── */}
       <section
         aria-labelledby="team-heading"
         className="px-4 md:px-10"
@@ -204,7 +274,7 @@ export default function HomePage() {
               </h2>
               <div className="mx-auto h-1 w-16 rounded-full bg-[#4d8cff]" />
               <p className="mx-auto max-w-xl text-sm leading-6 text-slate-500">
-                The passionate volunteers behind DevFest working to create an inclusive and high-impact experience for everyone.
+                The passionate volunteers behind DevFest Roma working to create an inclusive and high-impact experience for everyone.
               </p>
             </div>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

@@ -14,7 +14,7 @@ describe("Venue page reference structure", () => {
     expect(html).toContain("Venue Address");
     expect(html).toContain("How to get here");
     expect(html).toContain("Università degli Studi Roma Tre");
-    expect(html).toContain("Oct 24-25, 2024");
+    expect(html).toContain("October 10, 2026");
     expect(html).toContain("9:00 AM - 6:00 PM");
   });
 });
