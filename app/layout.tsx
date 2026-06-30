@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/src/components/layout/header";
 import { Footer } from "@/src/components/layout/footer";
+import { ServiceWorkerRegistration } from "@/src/components/pwa/service-worker-registration";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,6 +14,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "DevFest Roma by GDG Roma Città",
   description: "Official DevFest Roma website with agenda, speakers, and venue details.",
+  manifest: "/manifest.json",
   openGraph: {
     title: "DevFest Roma by GDG Roma Città",
     description: "Discover sessions, speakers, and venue information for DevFest Roma.",
@@ -37,6 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           {children}
         </div>
         <Footer />
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );
