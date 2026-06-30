@@ -3,7 +3,6 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Header } from "@/src/components/layout/header";
 import { Footer } from "@/src/components/layout/footer";
-import { ServiceWorkerRegistration } from "@/src/components/pwa/service-worker-registration";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -39,7 +38,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         {children}
       </div>
       <Footer />
-      <ServiceWorkerRegistration />
     </NextIntlClientProvider>
   );
 }
