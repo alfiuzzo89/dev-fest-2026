@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import type { TeamMember } from "@/src/types/content";
 
 type TeamCardProps = {
@@ -7,6 +10,8 @@ type TeamCardProps = {
 };
 
 export function TeamCard({ member, portraitAlt }: TeamCardProps) {
+  const t = useTranslations("team");
+
   return (
     <article
       data-organizer-card={member.name}
@@ -22,8 +27,9 @@ export function TeamCard({ member, portraitAlt }: TeamCardProps) {
       <div className="mt-4 space-y-1">
         <h3 className="m-0 text-[1.02rem] font-semibold tracking-[-0.03em] text-slate-900">{member.name}</h3>
         <p className="m-0 text-[0.7rem] font-semibold uppercase tracking-[0.08em]" style={{ color: member.accentColor ?? "#1a73e8" }}>
-          {member.role}
+          {t(`${member.id}.role`)}
         </p>
+        <p className="m-0 text-[0.78rem] leading-5 text-slate-500">{t(`${member.id}.bioShort`)}</p>
       </div>
       <div className="mt-4 flex items-center justify-center gap-3 text-slate-400">
         {member.links.map((link) => (

@@ -59,7 +59,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {team.map((member) => (
-              <TeamCard key={member.name} member={member} />
+              <TeamCard key={member.id} member={member} />
             ))}
           </div>
         </div>

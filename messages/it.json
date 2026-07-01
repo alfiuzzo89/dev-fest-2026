@@ -73,5 +73,27 @@
   },
   "teamCard": {
     "portraitAlt": "ritratto di {name}"
+  },
+  "team": {
+    "davide-passafaro": {
+      "role": "Organizzatore",
+      "bioShort": "Co-organizzatore di GDG Roma Città, appassionato di costruire community di sviluppatori inclusive."
+    },
+    "giorgio-galassi": {
+      "role": "Organizzatore",
+      "bioShort": "Co-organizzatore di GDG Roma Città, sviluppatore freelance e community builder."
+    },
+    "eleonora-biancone": {
+      "role": "Organizzatrice",
+      "bioShort": "Co-organizzatrice di GDG Roma Città, lavora in BIP e promuove community tech diversificate."
+    },
+    "ryan-jherome-burgos": {
+      "role": "Organizzatore",
+      "bioShort": "Co-organizzatore di GDG Roma Città, Frontend Software Engineer e contributore della community."
+    },
+    "giulio-alfieri": {
+      "role": "Organizzatore",
+      "bioShort": "Co-organizzatore di GDG Roma Città, dedicato alla crescita dell'ecosistema di sviluppatori locale."
+    }
   }
 }

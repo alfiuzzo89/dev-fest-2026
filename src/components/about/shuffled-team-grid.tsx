@@ -44,7 +44,7 @@ export function ShuffledTeamGrid({ members, getPortraitAlt }: ShuffledTeamGridPr
     <>
       {ordered.map((member) => (
         <TeamCard
-          key={member.name}
+          key={member.id}
           member={member}
           portraitAlt={getPortraitAlt ? getPortraitAlt(member.name) : `${member.name} portrait`}
         />

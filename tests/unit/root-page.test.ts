@@ -1,11 +1,19 @@
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { NextIntlClientProvider } from "next-intl";
 import HomePage from "@/app/[locale]/page";
 import { venue } from "@/src/content/venue";
+import messages from "@/messages/en.json";
 
 globalThis.React = React;
 
-const renderHomePage = () => renderToStaticMarkup(HomePage());
+// HomePage renders client components (e.g. TeamCard) that call useTranslations,
+// which requires a NextIntlClientProvider ancestor — normally supplied by the
+// locale layout, which isn't part of this unit render.
+const renderHomePage = () =>
+  renderToStaticMarkup(
+    React.createElement(NextIntlClientProvider, { locale: "en", messages, children: HomePage() })
+  );
 
 describe("root page — landing page", () => {
   test("renders the event info section with title, date, and location", () => {

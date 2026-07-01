@@ -4,9 +4,8 @@ export type SocialLink = {
 };
 
 export type TeamMember = {
+  id: string;
   name: string;
-  role: string;
-  bioShort: string;
   photo: string;
   links: SocialLink[];
   accentColor?: string;

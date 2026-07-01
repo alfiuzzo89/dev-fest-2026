@@ -1,10 +1,18 @@
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { NextIntlClientProvider } from "next-intl";
 import AboutPage from "@/app/[locale]/about/page";
+import messages from "@/messages/en.json";
 
 globalThis.React = React;
 
-const renderAboutPage = () => renderToStaticMarkup(AboutPage());
+// AboutPage renders client components (e.g. TeamCard) that call useTranslations,
+// which requires a NextIntlClientProvider ancestor — normally supplied by the
+// locale layout, which isn't part of this unit render.
+const renderAboutPage = () =>
+  renderToStaticMarkup(
+    React.createElement(NextIntlClientProvider, { locale: "en", messages, children: AboutPage() })
+  );
 
 describe("About page reference structure", () => {
   test("renders the screenshot-scoped hero, organizers grid, and values strip", () => {

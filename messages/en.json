@@ -73,5 +73,27 @@
   },
   "teamCard": {
     "portraitAlt": "{name} portrait"
+  },
+  "team": {
+    "davide-passafaro": {
+      "role": "Organizer",
+      "bioShort": "Co-organizer of GDG Roma Città, passionate about building inclusive developer communities."
+    },
+    "giorgio-galassi": {
+      "role": "Organizer",
+      "bioShort": "Co-organizer of GDG Roma Città, freelance developer and community builder."
+    },
+    "eleonora-biancone": {
+      "role": "Organizer",
+      "bioShort": "Co-organizer of GDG Roma Città, working at BIP and advocating for diverse tech communities."
+    },
+    "ryan-jherome-burgos": {
+      "role": "Organizer",
+      "bioShort": "Co-organizer of GDG Roma Città, Frontend Software Engineer and community contributor."
+    },
+    "giulio-alfieri": {
+      "role": "Organizer",
+      "bioShort": "Co-organizer of GDG Roma Città, dedicated to growing the local developer ecosystem."
+    }
   }
 }
