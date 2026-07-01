@@ -161,5 +161,34 @@
     "featured": {
       "about": "Charlie is a Staff Engineer at Uber where she leads the web performance infrastructure team. With over 12 years of experience in the industry, she has been a vocal advocate for accessible web patterns and modern CSS architecture. She is a frequent contributor to open-source and loves building tools that make developers' lives easier."
     }
+  },
+  "sessions": {
+    "sess-101": {
+      "title": "The Future of Tech: AI, Web and Beyond",
+      "abstract": "A keynote exploring how the next wave of Google technologies is reshaping product teams and developer workflows."
+    },
+    "sess-102": {
+      "title": "Building Adaptive UIs with Flutter",
+      "abstract": "A practical intro to building responsive mobile interfaces with production-minded design systems."
+    },
+    "sess-205": {
+      "title": "Scalable Microservices with GKE",
+      "abstract": "Patterns for designing resilient cloud services with Kubernetes, observability, and safe rollout paths."
+    },
+    "sess-301": {
+      "title": "Getting Started with Gemini API",
+      "abstract": "An intro to building practical AI experiences with Gemini, evaluation basics, and production guardrails."
+    },
+    "sess-401": {
+      "title": "Modern Web: From WebAssembly to AI Browsing",
+      "abstract": "A tour through the latest browser capabilities, web runtimes, and AI-assisted interaction patterns."
+    }
+  },
+  "agenda": {
+    "heading": "Event Agenda",
+    "intro": "Join us for a day of deep dives into the latest Google technologies. Filter by track or level to build your perfect schedule.",
+    "lunchBreak": "Lunch Break & Networking",
+    "saveSessionAriaLabel": "Save {title}",
+    "noSessionsMatch": "No sessions match the current filters."
   }
 }

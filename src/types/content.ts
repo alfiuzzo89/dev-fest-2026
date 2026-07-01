@@ -26,10 +26,10 @@ export type Speaker = {
 
 export type SessionLevel = "beginner" | "intermediate" | "advanced";
 
+// `title` and `abstract` are translated content and live in
+// messages/{locale}.json under the `sessions.<id>.*` namespace, keyed by `id`.
 export type Session = {
   id: string;
-  title: string;
-  abstract: string;
   start: string;
   end: string;
   track: string;

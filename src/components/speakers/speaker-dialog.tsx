@@ -12,6 +12,9 @@ type SpeakerDialogProps = {
 
 export function SpeakerDialog({ speaker, onClose }: SpeakerDialogProps) {
   const t = useTranslations("speakers");
+  // `title`/`abstract` for sessions are translated content and live in the
+  // `sessions.<id>.*` namespace, keyed by `Session.id` (see src/types/content.ts).
+  const tSessions = useTranslations("sessions");
   const speakerSessions = getSessionsBySpeaker(speaker.id);
 
   return (
@@ -35,7 +38,7 @@ export function SpeakerDialog({ speaker, onClose }: SpeakerDialogProps) {
             {speakerSessions.map((session) => (
               <li key={session.id}>
                 <Link href={`/agenda#${session.id}`} className="focus-ring rounded text-sm font-semibold text-gblue">
-                  {session.title}
+                  {tSessions(`${session.id}.title`)}
                 </Link>
               </li>
             ))}
