@@ -29,7 +29,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider messages={messages} timeZone="Europe/Rome">
       <a href="#main-content" className="focus-ring sr-only rounded bg-white px-3 py-2">
         Skip to content
       </a>
